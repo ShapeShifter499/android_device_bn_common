@@ -6,7 +6,7 @@ on init
     # no systemless SuperSU
     export SYSTEMLESS false
 
-    symlink /dev/block/platform/omap/omap_hsmmc.1 /dev/block/bootdevice
+    symlink /dev/block/platform/omap_hsmmc.1 /dev/block/bootdevice
     chown system /dev/block/bootdevice/by-name
 
 on fs
