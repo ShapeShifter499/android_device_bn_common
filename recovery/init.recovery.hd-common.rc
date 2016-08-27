@@ -8,6 +8,9 @@ on init
 
     symlink /dev/block/platform/omap_hsmmc.1 /dev/block/bootdevice
     chown system /dev/block/bootdevice/by-name
+    # support K3.0 eMMC links
+    mkdir /dev/block/platform/omap
+    symlink /dev/block/platform/omap_hsmmc.1 /dev/block/platform/omap/omap_hsmmc.1
 
 on fs
     mkdir /bootdata
